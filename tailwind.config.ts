@@ -14,6 +14,13 @@ const config: Config = {
       "2xl": "2.5rem",
       "3xl": "3rem",
     },
+    screens: {
+      mobile: "480px",
+      tablet: "640px",
+      "tablet-large": "768px",
+      laptop: "1024px",
+      desktop: "1280px",
+    },
     letterSpacing: {
       wide: "2.08px",
       wider: "2.32px",

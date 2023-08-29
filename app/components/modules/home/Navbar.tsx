@@ -22,8 +22,8 @@ const NavItem = ({
 const Navbar = () => {
   return (
     <nav className="flex justify-center bg-white border-t-[5px] border-yellow h-[137px] w-full text-blue-black">
-      <div className="xl:w-3/4 w-full flex justify-between items-center gap-[10px]">
-        <div className="grow justify-between pl-5 hidden lg:flex">
+      <div className="w-full flex justify-between items-center gap-[10px] desktop:w-3/4">
+        <div className="hidden tablet-large:flex grow justify-between pl-5">
           <NavItem href="/">Home</NavItem>
           <NavItem href="/">About</NavItem>
           <NavItem href="/">Experience</NavItem>
@@ -40,7 +40,7 @@ const Navbar = () => {
             </span>
           </div>
         </div>
-        <div className="grow justify-between items-center pr-5 hidden lg:flex">
+        <div className="hidden tablet-large:flex grow justify-between items-center pr-5">
           <NavItem href="/">Blog</NavItem>
           <NavItem href="/">Projects</NavItem>
           <Button type="secondary">Contact</Button>
