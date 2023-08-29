@@ -28,7 +28,7 @@ const config: Config = {
         "blue-black": "#233648",
         "blue-gray": "#8195A9",
         "green-light": "#CCDDD9",
-        "pink-light": "#F28482",
+        "pink-light": "#FCEEEC",
         coral: "#F28482",
       },
       fontFamily: {
