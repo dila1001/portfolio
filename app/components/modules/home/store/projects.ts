@@ -11,7 +11,7 @@ export const projects: Project[] = [
     name: "Personal Website",
     img_link: "/images/project_picture.png",
     description:
-      "Personal website & blog crafted with NextJS, TypeScript, Framer Motion, Tailwind CSS, CVA & Figma.",
+      "Personal website & blog crafted with NextJS, TypeScript, Framer Motion, Tailwind CSS, Tailwind Variants & Figma.",
     demo_link: "http://adilarazmi.com",
     github_link: "https://github.com/dila1001/portfolio",
   },

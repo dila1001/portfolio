@@ -20,17 +20,32 @@ export function getSortedPostsData() {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents);
 
+    const firstParagraphEndIndex = matterResult.content.indexOf("\n\n");
+
+    const firstParagraph = matterResult.content
+      .slice(0, firstParagraphEndIndex)
+      .replace(/\*\*/g, "");
+
+    const blogSnippet =
+      matterResult.content.replace(/\*\*/g, "").slice(0, 215) + "...";
+
     const blogPost: BlogPost = {
       id,
       title: matterResult.data.title,
       date: matterResult.data.date,
+      snippet: firstParagraph,
     };
 
     // Combine the data with the id
     return blogPost;
   });
   // Sort posts by date
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
+  return allPostsData.sort((a, b) => {
+    if (a.date && b.date) {
+      return a.date < b.date ? 1 : -1;
+    }
+    return 0;
+  });
 }
 
 export async function getPostData(id: string) {
