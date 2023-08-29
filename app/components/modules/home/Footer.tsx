@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaMailBulk } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-navy-blue flex items-center justify-center laptop:px-[175px] py-[116px]">
+    <div className="bg-navy-blue flex flex-col items-center justify-center laptop:px-[175px] py-[116px] relative">
       <div className="bg-white h-[745px] w-full border-yellow border-[10px] flex flex-col justify-center items-center">
         <div className="font-halisMedium uppercase text-blue-gray text-[32px] tracking-widest mb-[25px]">
           Get in touch
@@ -30,6 +30,9 @@ const Footer = () => {
             <FaGithub size={24} />
           </Link>
         </div>
+      </div>
+      <div className="absolute bottom-[45px] font-halisBook uppercase tracking-[0.4em] text-white text-[12px]">
+        COPYRIGHT © 2023 · ADILA RAZMI
       </div>
     </div>
   );
