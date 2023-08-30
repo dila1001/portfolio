@@ -4,7 +4,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import { tv, type VariantProps } from "tailwind-variants";
 
 export const blogCard = tv({
-  base: "bg-white  max-w-[450px] min-h-[262px] flex flex-col px-[20px] pb-[40px] pt-[20px] text-center",
+  base: "bg-white max-w-[450px] min-h-[262px] flex flex-col px-[20px] pb-[40px] pt-[20px] text-center relative",
   variants: {
     type: {
       rectangle: "max-w-[450px] min-h-[262px]",
@@ -35,7 +35,7 @@ export const BlogCard = (props: BlogCardProps) => {
         {props.title}
       </div>
       <div className="text-[14px]">{props.snippet}</div>
-      <div className="flex justify-end mt-auto mb-[-10px] mr-2">
+      <div className="absolute bottom-4 right-4">
         <Link
           className="text-yellow  hover:text-gray-light"
           href={`/blog/posts/${props.id}`}

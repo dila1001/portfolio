@@ -1,4 +1,4 @@
-export interface Job {
+export interface Work {
   period: string;
   position: string;
   company: string;
@@ -6,7 +6,7 @@ export interface Job {
   tech: string[];
 }
 
-export const projects: Job[] = [
+export const works: Work[] = [
   {
     period: "2022 - present",
     position: "Frontend Developer",

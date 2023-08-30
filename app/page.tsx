@@ -1,7 +1,3 @@
-// Hero, about me, experience, projects, blog posts,
-
-import Posts from "./components/modules/blog/Posts";
-import { Button } from "@ui/Button";
 import Hero from "./components/modules/home/Hero";
 import About from "./components/modules/home/About";
 import Experience from "./components/modules/home/Experience";

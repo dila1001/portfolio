@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLaptop } from "react-icons/fa";
-import { Project } from "./store/projects";
-import { projects } from "./store/projects";
+import { Project } from "./data/projects";
+import { projects } from "./data/projects";
 
 const ProjectCard = ({
   name,
@@ -48,7 +48,7 @@ const ProjectCard = ({
 
 const Projects = () => {
   return (
-    <div className="bg-white min-h-screen flex flex-col items-center justify-center py-[70px]">
+    <section className="bg-white min-h-screen flex flex-col items-center justify-center py-[70px]">
       <div className="text-center font-halisMedium text-base text-blue-gray tracking-widest uppercase mb-[78px]">
         Projects
       </div>
@@ -64,7 +64,7 @@ const Projects = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

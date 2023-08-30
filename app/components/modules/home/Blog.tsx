@@ -4,7 +4,7 @@ import { BlogCard } from "@ui/BlogCard";
 const Blog = () => {
   const posts = getSortedPostsData();
   return (
-    <div className="bg-gray-light min-h-[453px] flex flex-col pt-[58px] pb-[73px] justify-center">
+    <section className="bg-gray-light min-h-[453px] flex flex-col pt-[58px] pb-[73px] justify-center">
       <div className="grid grid-cols-1 laptop:grid-cols-2 gap-[40px] mx-auto">
         <div className="w-[450px] flex items-center gap-2">
           <span className="font-halisMedium text-blue-gray uppercase text-base tracking-widest">
@@ -25,7 +25,7 @@ const Blog = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

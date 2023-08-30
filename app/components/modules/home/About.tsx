@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="bg-pink-light min-h-screen flex items-center justify-center">
+    <section className="bg-pink-light min-h-screen flex items-center justify-center py-[80px] ">
       <div className="flex flex-col items-center w-[775px] text-center">
         <div className="font-caslon text-[48px] text-blue-black leading-none mb-[35px]">
           From photoshop to visual studio code.
@@ -35,7 +35,7 @@ const About = () => {
           <br />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

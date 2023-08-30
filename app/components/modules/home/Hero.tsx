@@ -3,7 +3,7 @@ import { Button } from "@ui/Button";
 
 const Hero = () => {
   return (
-    <div className="flex min-h-[calc(100vh-137px)] items-center justify-center">
+    <section className="flex min-h-[calc(100vh-137px)] items-center justify-center">
       <div className="flex flex-col mb-[50px]">
         <div className="mb-[-10px] z-10 tablet-large:ml-[100px] font-oakleyscript text-[64px] leading-none text-blue-gray">
           Hi, Im Adila!
@@ -28,7 +28,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

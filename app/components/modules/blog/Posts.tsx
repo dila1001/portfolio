@@ -1,5 +1,6 @@
 import { getSortedPostsData } from "@/lib/posts";
 import ListItem from "./ListItem";
+import { BlogCard } from "../../ui/BlogCard";
 
 export default function Posts() {
   const posts = getSortedPostsData();
@@ -9,7 +10,14 @@ export default function Posts() {
       <h2 className="text-4xl font-bold dark:text-white/90">Blog</h2>
       <ul className="w-full">
         {posts.map((post) => (
-          <ListItem key={post.id} post={post} />
+          <BlogCard
+            key={post.id}
+            title={post.title}
+            snippet={post.snippet}
+            id={post.id}
+            date={post.date}
+            type="square"
+          />
         ))}
       </ul>
     </section>

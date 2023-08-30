@@ -7,10 +7,10 @@ export const button = tv({
       primary:
         "bg-blue-black text-white rounded-none font-halisMedium text-[13px] tracking-widest uppercase py-[11px] px-[60px] leading-4",
       secondary:
-        "border-yellow border-[2px] rounded-none bg-white text-blue-black uppercase tracking-widest text-[11px] px-[15px] py-[5px] hover:border-green-light hover:text-blue-gray",
+        "border-yellow border-[2px] rounded-none bg-transparent text-blue-black uppercase tracking-widest text-[11px] px-[15px] py-[5px] hover:border-green-light hover:text-blue-gray",
     },
-    flat: {
-      true: "bg-transparent",
+    whiteText: {
+      true: "text-white",
     },
   },
   defaultVariants: {

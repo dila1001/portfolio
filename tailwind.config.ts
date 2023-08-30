@@ -32,6 +32,7 @@ const config: Config = {
         yellow: "#F6BD60",
         "yellow-light": "#FFF8F1",
         "navy-blue": "#1E2F3F",
+        "navy-blue-light": "#253F57",
         "blue-black": "#233648",
         "blue-gray": "#8195A9",
         "green-light": "#CCDDD9",
