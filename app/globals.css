@@ -21,3 +21,7 @@
   font-family: "Halis Book";
   src: url("/fonts/HalisGR-Book.otf") format("opentype");
 }
+
+html {
+  scroll-behavior: smooth;
+}

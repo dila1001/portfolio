@@ -28,13 +28,13 @@ interface BlogCardProps extends BlogCardVariants {
 export const BlogCard = (props: BlogCardProps) => {
   return (
     <div className={blogCard(props)}>
-      <div className="mb-3 uppercase text-[13px] tracking-widest text-blue-gray font-halisMedium">
+      <div className="grow-0 mb-3 uppercase text-[13px] tracking-widest text-blue-gray font-halisMedium">
         {getFormattedDate(props.date)}
       </div>
-      <div className="font-caslon text-blue-black text-[24px] leading-none mb-3">
+      <div className="grow-[1] font-caslon text-blue-black text-[24px] leading-none mb-3">
         {props.title}
       </div>
-      <div className="text-[14px]">{props.snippet}</div>
+      <div className="grow-[2] text-[14px]">{props.snippet}</div>
       <div className="absolute bottom-4 right-4">
         <Link
           className="text-yellow  hover:text-gray-light"
