@@ -1,4 +1,6 @@
+"use client";
 import { tv, type VariantProps } from "tailwind-variants";
+import { motion } from "framer-motion";
 
 export const button = tv({
   base: "px-4 py-1.5 rounded-full hover:opacity-80",
@@ -25,5 +27,12 @@ interface ButtonProps extends ButtonVariants {
 }
 
 export const Button = (props: ButtonProps) => {
-  return <button className={button(props)}>{props.children}</button>;
+  return (
+    <motion.button
+      whileHover={{ scale: 0.9, transition: { duration: 0.3 } }}
+      className={button(props)}
+    >
+      {props.children}
+    </motion.button>
+  );
 };

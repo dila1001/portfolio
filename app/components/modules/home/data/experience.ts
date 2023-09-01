@@ -38,7 +38,7 @@ export const works: Work[] = [
     company: "Johanna Sawalha Executive Coaching Inc.",
     description:
       "Planned and implemented site design, functionality and navigation, along with audience funnels and data capture points.",
-    tech: ["WordPress", "HML", "CSS", "UI/UX"],
+    tech: ["WordPress", "HTML", "CSS", "UI/UX"],
   },
   {
     period: "Sep - Dec 2019",
@@ -53,6 +53,7 @@ export const works: Work[] = [
       "React",
       "Python",
       "Django",
+      "Styled Components",
       "PostgreSQL",
     ],
   },

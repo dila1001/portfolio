@@ -1,11 +1,11 @@
 ---
-title: "When to Use Static Generation vs. Server-side Rendering"
-date: "2023-03-17"
+title: "Building My Portfolio Website & Blog"
+date: "2023-08-31"
 ---
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+I once had a comment from a fellow frontend colleague saying "how are you a frontend developer without your own site?". He's right. I had my own site at 14 so why don't I have one now that I'm a frontend developer and can do so much more?
 
-You can use Static Generation for many types of pages, including:
+I decided to
 
 - Marketing pages
 - Blog posts
