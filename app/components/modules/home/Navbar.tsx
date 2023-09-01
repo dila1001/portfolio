@@ -53,7 +53,9 @@ const Navbar = ({ blog }: { blog?: boolean }) => {
           <NavItem href="/blog">Blog</NavItem>
           <NavItem href="#projects-section">Projects</NavItem>
           <Link href="#contact-section">
-            <Button type="secondary">Contact</Button>
+            <Button type="secondary" whiteText={blog ? true : false}>
+              Contact
+            </Button>
           </Link>
         </div>
       </div>

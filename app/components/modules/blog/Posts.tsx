@@ -5,7 +5,7 @@ export default function Posts() {
   const posts = getSortedPostsData();
 
   return (
-    <section className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-[40px] mx-auto">
+    <section className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-[40px] mx-auto py-[120px]">
       {posts.map((post) => (
         <BlogCard
           key={post.id}
