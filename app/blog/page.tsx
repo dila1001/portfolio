@@ -4,8 +4,8 @@ import Posts from "../components/modules/blog/Posts";
 
 export default function Home() {
   return (
-    <main className="mx-auto">
+    <section className="bg-gray-light flex flex-col pt-[58px] pb-[73px] justify-center">
       <Posts />
-    </main>
+    </section>
   );
 }
