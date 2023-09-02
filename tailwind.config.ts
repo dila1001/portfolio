@@ -19,6 +19,7 @@ const config: Config = {
       tablet: "640px",
       "tablet-large": "768px",
       laptop: "1024px",
+      blogpost: "1094px",
       desktop: "1280px",
     },
     letterSpacing: {

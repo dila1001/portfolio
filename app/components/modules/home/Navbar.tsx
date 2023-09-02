@@ -4,34 +4,41 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Button } from "@ui/Button";
 import { motion } from "framer-motion";
 
-const NavItem = ({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => {
-  return (
-    <motion.div whileHover={{ scale: 0.9, transition: { duration: 0.3 } }}>
-      <Link
-        href={href}
-        className="uppercase tracking-widest text-[11px] hover:text-blue-gray"
-      >
-        {children}
-      </Link>
-    </motion.div>
-  );
+const navVariants = {
+  hidden: { y: -250 },
+  visible: {
+    y: 0,
+    transition: {
+      type: "spring",
+      delay: 0.2,
+      stiffness: 100,
+    },
+  },
+};
+
+const logoVariants = {
+  hidden: {
+    y: 250,
+  },
+  visible: {
+    y: 0,
+    fontSize: 53,
+  },
 };
 
 const Navbar = ({ blog }: { blog?: boolean }) => {
   return (
-    // <nav className="flex justify-center border-t-[5px] border-yellow h-[137px] w-full relative items-center bg-white text-blue-black">
     <nav
       className={`flex justify-center border-t-[5px] border-yellow h-[137px] w-full relative items-center ${
         !blog ? " bg-white text-blue-black" : "bg-navy-blue text-white"
       }`}
     >
-      <div className="w-full flex justify-between items-center gap-[10px] desktop:w-3/4">
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={navVariants}
+        className="w-full flex justify-between items-center gap-[10px] desktop:w-3/4"
+      >
         <div className="hidden tablet-large:flex grow justify-between pl-5">
           <NavItem href="/">Home</NavItem>
           <NavItem href="#about-section">About</NavItem>
@@ -58,7 +65,7 @@ const Navbar = ({ blog }: { blog?: boolean }) => {
             </Button>
           </Link>
         </div>
-      </div>
+      </motion.div>
       <div className="desktop:flex items-center gap-4 absolute right-4 hidden ">
         <Link
           className="text-green-light hover:text-gray-light"
@@ -78,3 +85,22 @@ const Navbar = ({ blog }: { blog?: boolean }) => {
 };
 
 export default Navbar;
+
+const NavItem = ({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <motion.div whileHover={{ scale: 0.9, transition: { duration: 0.3 } }}>
+      <Link
+        href={href}
+        className="uppercase tracking-widest text-[11px] hover:text-blue-gray"
+      >
+        {children}
+      </Link>
+    </motion.div>
+  );
+};
