@@ -1,11 +1,10 @@
-import { NextApiRequest } from "next";
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
 // To handle a GET request to /api
-export async function GET(request: NextApiRequest) {
+export async function GET(request: Request) {
   const sortedPosts = getSortedPostsData();
   return NextResponse.json({ data: sortedPosts }, { status: 200 });
 }
