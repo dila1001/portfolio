@@ -33,11 +33,8 @@ import { useEffect, useState } from "react";
 
 const Post = ({ params }: { params: { postId: string } }) => {
   const { postId } = params;
-
-  // Error handling
-  // if (!posts.find((post) => post.id === postId)) notFound();
-
   const [post, setPost] = useState<BlogPost | null>(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch(`/api/posts/${postId}`)
@@ -47,14 +44,22 @@ const Post = ({ params }: { params: { postId: string } }) => {
       })
       .catch((error) => {
         console.error("Error:", error);
+        setError(true);
       });
   }, []);
 
   return (
     <main className="font-halisBook flex flex-col justify-center items-center">
-      <div className="grid blogpost:grid-cols-[814px,235px] gap-[40px] my-[36px]">
-        {post && (
-          <>
+      {error ? (
+        <div className="h-[300px] bg-white flex flex-col justify-center items-center my-[36px] w-3/4 gap-[40px]">
+          <p>The requested post does not exist.</p>
+          <p className="uppercase font-halisMedium text-[13px] tracking-wider text-blue-gray">
+            <Link href="/blog">← Back to posts</Link>
+          </p>
+        </div>
+      ) : (
+        post && (
+          <div className="grid blogpost:grid-cols-[814px,235px] gap-[40px] my-[36px]">
             <div className="bg-white min-h-[203px] flex justify-center items-center flex-col text-center px-10">
               <p className="font-halisMedium text-base uppercase tracking-wider text-blue-gray mb-[12px]">
                 {getFormattedDate(post.date)}
@@ -89,9 +94,9 @@ const Post = ({ params }: { params: { postId: string } }) => {
             <p className="uppercase font-halisMedium text-[13px] tracking-wider text-blue-gray pb-[100px]">
               <Link href="/blog">← Back to posts</Link>
             </p>
-          </>
-        )}
-      </div>
+          </div>
+        )
+      )}
     </main>
   );
 };
