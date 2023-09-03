@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import Hero from "./components/modules/home/Hero";
 import About from "./components/modules/home/About";
 import Experience from "./components/modules/home/Experience";
@@ -9,22 +9,28 @@ import { useEffect, useState } from "react";
 import Preloader from "./components/ui/Preloader";
 
 export default function Home() {
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 2000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, []);
   return (
-    <main className="mx-auto">
-      {/* {isLoading && <Preloader />} */}
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Blog />
-    </main>
+    <>
+      {isLoading ? (
+        <Preloader />
+      ) : (
+        <main className="mx-auto">
+          {isLoading && <Preloader />}
+          <Navbar />
+          <Hero />
+          <About />
+          <Experience />
+          <Projects />
+          <Blog />
+        </main>
+      )}
+    </>
   );
 }

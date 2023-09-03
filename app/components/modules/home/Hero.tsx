@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { Button } from "@ui/Button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   const heroVariants = {
@@ -46,7 +47,9 @@ const Hero = () => {
               I enjoy creating robust & scalable frontend solutions enriched
               with exceptional user experiences.
             </div>
-            <Button type="primary">About me</Button>
+            <Link href="#about-section">
+              <Button type="primary">About me</Button>
+            </Link>
           </div>
         </div>
       </motion.div>

@@ -1,7 +1,11 @@
-// Blog hero, blog posts list
-
+import { Metadata } from "next";
 import BlogHero from "../components/modules/blog/BlogHero";
 import Posts from "../components/modules/blog/Posts";
+
+export const metadata: Metadata = {
+  title: "Adila Razmi's Blog",
+  description: "Adila's blog",
+};
 
 export default function Home() {
   return (

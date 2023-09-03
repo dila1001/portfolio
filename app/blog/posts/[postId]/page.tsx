@@ -1,9 +1,9 @@
 "use client";
+import Profile from "@/app/components/modules/blog/Profile";
 import { Button } from "@/app/components/ui/Button";
 import getFormattedDate from "@/lib/getFormattedDate";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { useEffect, useState } from "react";
 
 // export function generateStaticParams() {
@@ -12,23 +12,6 @@ import { useEffect, useState } from "react";
 //   return posts.map((post) => ({
 //     postId: post.id,
 //   }));
-// }
-
-// export function generateMetadata({ params }: { params: { postId: string } }) {
-//   const posts = getSortedPostsData();
-//   const { postId } = params;
-
-//   const post = posts.find((post) => post.id === postId);
-
-//   if (!post) {
-//     return {
-//       title: "Post Not Found",
-//     };
-//   }
-
-//   return {
-//     title: post.title,
-//   };
 // }
 
 const Post = ({ params }: { params: { postId: string } }) => {
@@ -47,6 +30,10 @@ const Post = ({ params }: { params: { postId: string } }) => {
         setError(true);
       });
   }, []);
+
+  useEffect(() => {
+    document.title = post ? post.title : "Post Not Found";
+  }, [post]);
 
   return (
     <main className="font-halisBook flex flex-col justify-center items-center">
@@ -74,23 +61,7 @@ const Post = ({ params }: { params: { postId: string } }) => {
             <article className="bg-white prose-lg p-[30px]">
               <section dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
             </article>
-            <div className=" bg-white hidden blogpost:block px-[30px] py-[40px] h-fit text-center">
-              <Image
-                className="rounded-full mx-auto mb-[15px]"
-                src="/images/adila.jpg"
-                width={157}
-                height={153}
-                alt="Adila Razmi"
-                priority={true}
-              />
-              <p className="mb-[15px] font-oakleyscript text-[48px] leading-none">
-                Adila
-              </p>
-              <p className="mb-[15px]">
-                Frontend developer in Stockholm, Sweden.
-              </p>
-              <Button>More</Button>
-            </div>
+            <Profile />
             <p className="uppercase font-halisMedium text-[13px] tracking-wider text-blue-gray pb-[100px]">
               <Link href="/blog">← Back to posts</Link>
             </p>

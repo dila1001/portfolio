@@ -1,5 +1,5 @@
 function Preloader() {
-  return <div>Preloader</div>;
+  return <div className="h-screen bg-navy-blue">Preloader</div>;
 }
 
 export default Preloader;
