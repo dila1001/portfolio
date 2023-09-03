@@ -9,9 +9,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     name: "Personal Website",
-    img_link: "/images/project_picture.png",
+    img_link: "/images/portfolio.jpg",
     description:
-      "Personal website & blog crafted with NextJS, TypeScript, Framer Motion, GSAP, Tailwind CSS, Tailwind Variants & Figma.",
+      "Personal website & blog crafted with NextJS, TypeScript, Framer Motion, Tailwind CSS, Tailwind Variants & Figma.",
     demo_link: "http://adilarazmi.com",
     github_link: "https://github.com/dila1001/portfolio",
   },
