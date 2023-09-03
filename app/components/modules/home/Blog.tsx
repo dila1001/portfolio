@@ -1,8 +1,21 @@
-import { getSortedPostsData } from "@/lib/posts";
+"use client";
 import { BlogCard } from "@ui/BlogCard";
+import { useEffect, useState } from "react";
 
 const Blog = () => {
-  const posts = getSortedPostsData();
+  const [posts, setPosts] = useState<BlogPost[] | null>(null);
+
+  useEffect(() => {
+    fetch("/api/posts")
+      .then((response) => response.json())
+      .then((res) => {
+        setPosts(res.data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
+
   return (
     <section className="bg-gray-light min-h-[453px] flex flex-col pt-[58px] pb-[73px] justify-center">
       <div className="grid grid-cols-1 laptop:grid-cols-2 gap-[40px] mx-auto">
@@ -15,15 +28,18 @@ const Blog = () => {
           </span>
         </div>
         <div className="w-[450px]"></div>
-        {posts.slice(0, 2).map((post) => (
-          <BlogCard
-            key={post.id}
-            title={post.title}
-            snippet={post.snippet}
-            id={post.id}
-            date={post.date}
-          />
-        ))}
+        {posts &&
+          posts
+            .slice(0, 2)
+            .map((post) => (
+              <BlogCard
+                key={post.id}
+                title={post.title}
+                snippet={post.snippet}
+                id={post.id}
+                date={post.date}
+              />
+            ))}
       </div>
     </section>
   );
