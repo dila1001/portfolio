@@ -28,4 +28,4 @@ export const WorkItem = ({ work }: { work: Work }) => {
   );
 };
 
-export default Work;
+export default WorkItem;

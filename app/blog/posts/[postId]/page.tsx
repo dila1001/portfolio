@@ -32,7 +32,7 @@ export function generateMetadata({ params }: { params: { postId: string } }) {
   };
 }
 
-export const Post = async ({ params }: { params: { postId: string } }) => {
+const Post = async ({ params }: { params: { postId: string } }) => {
   const posts = getSortedPostsData();
   const { postId } = params;
 
