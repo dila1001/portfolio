@@ -5,9 +5,9 @@ const Footer = () => {
   return (
     <section
       id="contact-section"
-      className="bg-navy-blue flex flex-col items-center justify-center laptop:px-[175px] py-[116px] relative"
+      className="bg-navy-blue flex flex-col items-center justify-center laptop:px-[175px] py-[116px] relative h-screen"
     >
-      <div className="bg-white h-[745px] w-full border-yellow border-[10px] flex flex-col justify-center items-center">
+      <div className="bg-white grow w-full border-yellow border-[10px] flex flex-col justify-center items-center">
         <div className="font-halisMedium uppercase text-blue-gray text-[32px] tracking-widest mb-[25px]">
           Get in touch
         </div>
