@@ -48,7 +48,7 @@ const Post = ({ params }: { params: { postId: string } }) => {
         post && (
           <div className="grid blogpost:grid-cols-[814px,235px] gap-[40px] my-[36px]">
             <div className="bg-white min-h-[203px] flex justify-center items-center text-center">
-              <div className="grow">
+              <div className="grow px-[36px]">
                 <h1 className=" font-caslon text-[40px] leading-none text-blue-black m-0">
                   {post.title}
                 </h1>
@@ -63,7 +63,11 @@ const Post = ({ params }: { params: { postId: string } }) => {
             <div className="hidden blogpost:block"></div>
 
             <article className="bg-white prose-lg p-[30px]">
-              <section dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+              {post.contentHtml !== undefined ? (
+                <section
+                  dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+                />
+              ) : null}
             </article>
             <Profile />
             <p className="uppercase font-halisMedium text-[13px] tracking-wider text-blue-gray pb-[100px]">
