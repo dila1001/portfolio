@@ -9,28 +9,38 @@ import { useEffect, useState } from "react";
 import Preloader from "./components/ui/Preloader";
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //     document.body.style.cursor = "default";
+  //     window.scrollTo(0, 0);
+  //   }, 2000);
+  // }, []);
   return (
-    <>
-      {isLoading ? (
-        <Preloader />
-      ) : (
-        <main className="mx-auto">
-          {isLoading && <Preloader />}
-          <Navbar />
-          <Hero />
-          <About />
-          <Experience />
-          <Projects />
-          <Blog />
-        </main>
-      )}
-    </>
+    // <>
+    //   {isLoading ? (
+    //     <Preloader />
+    //   ) : (
+    //     <main className="mx-auto">
+    //       {isLoading && <Preloader />}
+    //       <Navbar />
+    //       <Hero />
+    //       <About />
+    //       <Experience />
+    //       <Projects />
+    //       <Blog />
+    //     </main>
+    //   )}
+    // </>
+    <main className="mx-auto">
+      <Navbar />
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Blog />
+    </main>
   );
 }
