@@ -1,4 +1,4 @@
-import getFormattedDate from "@/lib/getFormattedDate";
+import { getFormattedDateLong } from "@/lib/getFormattedDate";
 import Link from "next/link";
 import { FaArrowCircleRight } from "react-icons/fa";
 import { tv, type VariantProps } from "tailwind-variants";
@@ -29,7 +29,7 @@ export const BlogCard = (props: BlogCardProps) => {
   return (
     <div className={blogCard(props)}>
       <div className="grow-0 mb-3 uppercase text-[13px] tracking-widest text-blue-gray font-halisMedium">
-        {getFormattedDate(props.date)}
+        {getFormattedDateLong(props.date)}
       </div>
       <div className="grow-[1] font-caslon text-blue-black text-[24px] leading-none mb-3">
         {props.title}

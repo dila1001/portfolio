@@ -1,7 +1,7 @@
 "use client";
 import Profile from "@/app/components/modules/blog/Profile";
 import { Button } from "@/app/components/ui/Button";
-import getFormattedDate from "@/lib/getFormattedDate";
+import { getFormattedDateShort } from "@/lib/getFormattedDate";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -47,13 +47,17 @@ const Post = ({ params }: { params: { postId: string } }) => {
       ) : (
         post && (
           <div className="grid blogpost:grid-cols-[814px,235px] gap-[40px] my-[36px]">
-            <div className="bg-white min-h-[203px] flex justify-center items-center flex-col text-center px-10">
-              <p className="font-halisMedium text-base uppercase tracking-wider text-blue-gray mb-[12px]">
-                {getFormattedDate(post.date)}
-              </p>
-              <h1 className="font-caslon text-[40px] leading-none text-blue-black m-0">
-                {post.title}
-              </h1>
+            <div className="bg-white min-h-[203px] flex justify-center items-center text-center">
+              <div className="grow">
+                <h1 className=" font-caslon text-[40px] leading-none text-blue-black m-0">
+                  {post.title}
+                </h1>
+              </div>
+              <div className="bg-green-light w-[52px] h-full flex justify-center items-center">
+                <p className="font-halisMedium text-base uppercase tracking-wider text-blue-black whitespace-nowrap transform -rotate-90 ">
+                  {getFormattedDateShort(post.date)}
+                </p>
+              </div>
             </div>
 
             <div className="hidden blogpost:block"></div>
