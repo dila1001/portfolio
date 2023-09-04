@@ -1,6 +1,6 @@
 export function getFormattedDateLong(dateString: string): string {
   return new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(
-    new Date(dateString)
+    new Date(dateString.replace(/-/g, "/"))
   );
 }
 
@@ -10,5 +10,7 @@ export function getFormattedDateShort(dateString: string): string {
     month: "short", // Use 'short' for abbreviated month names
     day: "numeric",
   };
-  return new Intl.DateTimeFormat("en-US", options).format(new Date(dateString));
+  return new Intl.DateTimeFormat("en-US", options).format(
+    new Date(dateString.replace(/-/g, "/"))
+  );
 }
