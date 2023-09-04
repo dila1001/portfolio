@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="font-halisMedium text-blue-gray text-[20px] flex items-center mb-[25px] gap-2">
           <FaMailBulk className="text-blue-gray" size={25} />
-          hello@adilarazmi.com
+          adila93@gmail.com
         </div>
         <div className="flex items-center gap-4">
           <Link
