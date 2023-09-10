@@ -1,20 +1,15 @@
-"use client";
 import { BlogCard } from "@ui/BlogCard";
-import { useEffect, useState } from "react";
 
-export default function Posts() {
-  const [posts, setPosts] = useState<BlogPost[] | null>(null);
+export default async function Posts() {
+  const getPosts = async (): Promise<{ data: BlogPost[] }> => {
+    const res = await fetch("https://adilarazmi.com/api/posts/");
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    return res.json();
+  };
 
-  useEffect(() => {
-    fetch("/api/posts")
-      .then((response) => response.json())
-      .then((res) => {
-        setPosts(res.data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }, []);
+  const { data: posts } = await getPosts();
 
   return (
     <section className="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 gap-[40px] mx-auto py-[120px]">

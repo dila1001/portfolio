@@ -1,20 +1,15 @@
-"use client";
 import { BlogCard } from "@ui/BlogCard";
-import { useEffect, useState } from "react";
 
-const Blog = () => {
-  const [posts, setPosts] = useState<BlogPost[] | null>(null);
+const Blog = async () => {
+  const getPosts = async (): Promise<{ data: BlogPost[] }> => {
+    const res = await fetch("https://adilarazmi.com/api/posts/");
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    return res.json();
+  };
 
-  useEffect(() => {
-    fetch("/api/posts")
-      .then((response) => response.json())
-      .then((res) => {
-        setPosts(res.data);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  }, []);
+  const { data: posts } = await getPosts();
 
   return (
     <section className="bg-gray-light min-h-[453px] flex flex-col pt-[58px] pb-[73px] justify-center">
@@ -28,18 +23,15 @@ const Blog = () => {
           </span>
         </div>
         <div className="w-[450px]"></div>
-        {posts &&
-          posts
-            .slice(0, 2)
-            .map((post) => (
-              <BlogCard
-                key={post.id}
-                title={post.title}
-                snippet={post.snippet}
-                id={post.id}
-                date={post.date}
-              />
-            ))}
+        {posts.slice(0, 2).map((post) => (
+          <BlogCard
+            key={post.id}
+            title={post.title}
+            snippet={post.snippet}
+            id={post.id}
+            date={post.date}
+          />
+        ))}
       </div>
     </section>
   );

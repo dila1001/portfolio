@@ -16,11 +16,11 @@ export const projects: Project[] = [
     github_link: "https://github.com/dila1001/portfolio",
   },
   {
-    name: "Personal Website",
+    name: "Contacts App",
     img_link: "/images/project_picture.png",
     description:
-      "Personal website & blog crafted with NextJS, TypeScript, Framer Motion, Tailwind CSS, CVA & Figma.",
-    demo_link: "http://adilarazmi.com",
-    github_link: "https://github.com/dila1001/portfolio",
+      "A contacts app that fetches contacts data from API and displays in list/grid view, featuring lazy-loading.",
+    demo_link: "https://dila1001-contacts.netlify.app/",
+    github_link: "https://github.com/dila1001/contacts-app",
   },
 ];
