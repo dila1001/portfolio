@@ -1,17 +1,16 @@
 import Profile from "@/app/components/modules/blog/Profile";
-import { Button } from "@/app/components/ui/Button";
 import { getFormattedDateShort } from "@/lib/getFormattedDate";
-import { Metadata, ResolvingMetadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
-// export function generateStaticParams() {
-//   const posts = getSortedPostsData();
+export async function generateStaticParams() {
+  const res = await fetch("https://adilarazmi.com/api/posts/");
 
-//   return posts.map((post) => ({
-//     postId: post.id,
-//   }));
-// }
+  const { data: posts }: { data: BlogPost[] } = await res.json();
+
+  return posts.map((post) => ({
+    postId: post.id,
+  }));
+}
 
 export async function generateMetadata({
   params,
