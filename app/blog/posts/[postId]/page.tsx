@@ -1,9 +1,10 @@
 import Profile from "@/app/components/modules/blog/Profile";
+import { server } from "@/config";
 import { getFormattedDateShort } from "@/lib/getFormattedDate";
 import Link from "next/link";
 
 export async function generateStaticParams() {
-  const res = await fetch("https://adilarazmi.com/api/posts/");
+  const res = await fetch(server + "/api/posts/");
 
   const { data: posts }: { data: BlogPost[] } = await res.json();
 
@@ -18,7 +19,7 @@ export async function generateMetadata({
   params: { postId: string };
 }) {
   const { postId } = params;
-  const res = await fetch(`https://adilarazmi.com/api/posts/${postId}`);
+  const res = await fetch(server + `/api/posts/${postId}`);
   const { data: post }: { data: BlogPost } = await res.json();
 
   return {
@@ -29,7 +30,7 @@ export async function generateMetadata({
 const Post = async ({ params }: { params: { postId: string } }) => {
   const { postId } = params;
   const getPost = async (): Promise<{ data: BlogPost }> => {
-    const res = await fetch(`https://adilarazmi.com/api/posts/${postId}`);
+    const res = await fetch(server + `/api/posts/${postId}`);
     if (!res.ok) {
       throw new Error("Failed to fetch data");
     }

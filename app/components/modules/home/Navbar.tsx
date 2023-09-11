@@ -42,10 +42,8 @@ const Navbar = ({ blog }: { blog?: boolean }) => {
       >
         <div className="hidden tablet-large:flex grow justify-between pl-5">
           <NavItem href="https://adilarazmi.com/">Home</NavItem>
-          <NavItem href="https://adilarazmi.com/#about-section">About</NavItem>
-          <NavItem href="https://adilarazmi.com/#experience-section">
-            Experience
-          </NavItem>
+          <NavItem href="/#about-section">About</NavItem>
+          <NavItem href="/#experience-section">Experience</NavItem>
         </div>
         <div className="flex grow justify-center">
           <div className="flex flex-col">
@@ -60,11 +58,9 @@ const Navbar = ({ blog }: { blog?: boolean }) => {
           </div>
         </div>
         <div className="hidden tablet-large:flex grow justify-between items-center pr-5">
-          <NavItem href="https://adilarazmi.com//blog">Blog</NavItem>
-          <NavItem href="https://adilarazmi.com/#projects-section">
-            Projects
-          </NavItem>
-          <Link href="https://adilarazmi.com/#contact-section">
+          <NavItem href="/blog">Blog</NavItem>
+          <NavItem href="/#projects-section">Projects</NavItem>
+          <Link href="#contact-section">
             <Button type="secondary" whiteText={blog ? true : false}>
               Contact
             </Button>

@@ -1,8 +1,9 @@
+import { server } from "@/config";
 import { BlogCard } from "@ui/BlogCard";
 
 const Blog = async () => {
   const getPosts = async (): Promise<{ data: BlogPost[] }> => {
-    const res = await fetch("https://adilarazmi.com/api/posts/");
+    const res = await fetch(server + "/api/posts/");
     if (!res.ok) {
       throw new Error("Failed to fetch data");
     }
