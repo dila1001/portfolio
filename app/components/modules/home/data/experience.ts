@@ -20,7 +20,7 @@ export const works: Work[] = [
 			'Tailwind CSS',
 			'xUnit',
 			'React',
-			'ASP.NET CORE',
+			'ASP.NET Core',
 			'Entity Framework',
 			'Azure',
 		],

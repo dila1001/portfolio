@@ -40,7 +40,7 @@ const About = () => {
 					<br />
 					<p className='flex justify-center gap-5 mt-10'>
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg'
 							alt='Javascript'
 							width={40}
 							height={40}
@@ -52,9 +52,15 @@ const About = () => {
 							width={40}
 							height={40}
 						/>
+						<Image
+							alt='C#'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg'
+							width={40}
+							height={40}
+						/>
 
 						<Image
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
 							alt='React'
 							width={40}
 							height={40}
@@ -70,13 +76,6 @@ const About = () => {
 						<Image
 							alt='Nextjs'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg'
-							width={40}
-							height={40}
-						/>
-
-						<Image
-							alt='C#'
-							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg'
 							width={40}
 							height={40}
 						/>
@@ -107,6 +106,12 @@ const About = () => {
 						<Image
 							alt='Tailwind CSS'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+							width={40}
+							height={40}
+						/>
+						<Image
+							alt='RxJS'
+							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rxjs/rxjs-plain.svg'
 							width={40}
 							height={40}
 						/>

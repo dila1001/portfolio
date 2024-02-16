@@ -30,14 +30,18 @@ const ProjectCard = ({
 			className='flex flex-col max-w-[450px] h-[420px]'
 		>
 			<div className='w-[450px] h-[263px]'>
-				<Image
-					src={img_link}
-					width={450}
-					height={263}
-					alt={name}
-					priority={true}
-					className='object-cover'
-				/>
+				{img_link ? (
+					<Image
+						src={img_link}
+						width={450}
+						height={263}
+						alt={name}
+						priority={true}
+						className='object-cover'
+					/>
+				) : (
+					<div className='bg-[#EEEFF1] w-full h-full'></div>
+				)}
 			</div>
 			<div className='flex flex-col items-center justify-center w-[368px] h-[208px] mt-[-50px] bg-white mx-auto p-[22px] text-center'>
 				<div className='font-caslon text-[34px] leading-none mb-[11px]'>
