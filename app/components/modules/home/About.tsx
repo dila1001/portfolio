@@ -38,84 +38,80 @@ const About = () => {
 						anything and everything.
 					</p>
 					<br />
-					<p className='flex justify-center gap-5 mt-10'>
+					<div className='flex justify-center gap-5 mt-10 flex-wrap'>
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg'
 							alt='Javascript'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
-
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg'
 							alt='Typescript'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
 						<Image
 							alt='C#'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-plain.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
-
 						<Image
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg'
 							alt='React'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
-
 						<Image
 							alt='Angular'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
-
 						<Image
 							alt='Nextjs'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
 						<Image
 							alt='Dotnet'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-plain-wordmark.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
 						<Image
 							alt='Azure'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
 						<Image
 							alt='HTML'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
 						<Image
 							alt='CSS'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
 						<Image
 							alt='Tailwind CSS'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
 						<Image
 							alt='RxJS'
 							src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rxjs/rxjs-plain.svg'
-							width={40}
-							height={40}
+							width={30}
+							height={30}
 						/>
-					</p>
+					</div>
 				</div>
 			</div>
 		</section>
